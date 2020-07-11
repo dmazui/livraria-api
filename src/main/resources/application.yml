@@ -1,0 +1,33 @@
+spring: 
+    datasource:
+        url: jdbc:postgresql://ec2-174-129-32-200.compute-1.amazonaws.com:5432/d5berksvrerse4?sslmode=require
+        username: rxboqhjqptgiut
+        password: 692082c96499f698f300c1a7ab42c2d41134957886acff0f85e0919e0cf4a60c
+        driver-class-name: org.postgresql.Driver
+
+        tomcat:
+            initial-size: 2 
+      
+
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: false
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                temp:    
+                    use_jdbc_metadata_defaults: false
+            
+    servlet:
+        multipart:
+            enabled: true
+            file-size-threshold: 2KB
+            max-request-size: 215MB
+            max-file-size: 200MB
+    
+#amazonProperties:
+#  endpointUrl: https://s3.us-east-2.amazonaws.com
+#  accessKey: XXXXXXXXXXXXXXXXX
+#  secretKey: XXXXXXXXXXXXXXXXXXXXXXXXXX
+#  bucketName: your-bucket-name

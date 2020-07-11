@@ -16,6 +16,8 @@ public class DtoToLivro implements Converter<LivroDTO, Livro>{
 		livro.setTitulo(dto.getTitulo());
 		livro.setIsbn(dto.getIsbn());
 		livro.setAutor(dto.getAutor());
+		livro.setLancamento(dto.getLancamento());
+		livro.setDescricao(dto.getDescricao());
 		
 		return livro;
 	}

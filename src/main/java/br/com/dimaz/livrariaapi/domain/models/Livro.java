@@ -1,6 +1,7 @@
 package br.com.dimaz.livrariaapi.domain.models;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -36,5 +38,10 @@ public class Livro implements Serializable {
 	
 	@Column(length = 60)
 	private String autor;
+	
+	private LocalDate lancamento;
+	
+	@Lob
+	private String descricao;
 		
 }
