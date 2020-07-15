@@ -8,7 +8,6 @@ spring:
         tomcat:
             initial-size: 2 
       
-
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         show-sql: false
@@ -26,8 +25,8 @@ spring:
             max-request-size: 215MB
             max-file-size: 200MB
     
-#amazonProperties:
-#  endpointUrl: https://s3.us-east-2.amazonaws.com
-#  accessKey: XXXXXXXXXXXXXXXXX
-#  secretKey: XXXXXXXXXXXXXXXXXXXXXXXXXX
-#  bucketName: your-bucket-name
+amazonProperties:
+    endpointUrl: ${BUCKET_URL:https://s3.us-east-1.amazonaws.com}
+    accessKey: ${BUCKET_ACCESS_KEY:AKIAWRNMX3RTJ3W7JMS5}
+    secretKey: ${BUCKET_SECRET_KEY:WhfAOXsgk2SMEU/TGsFNNHxGuaeoPKkgKXWYa6pS}
+    bucketName: ${BUCKET_NAME:livraria-api--imagens-dimaz}
